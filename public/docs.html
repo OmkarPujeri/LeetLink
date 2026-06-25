@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docs | LeetLink</title>
+    <link rel="icon" type="image/svg+xml" href="ll.svg">
+
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Runwai Design System -->
+    <link rel="stylesheet" href="css/runwai.css">
+    
+    <style>
+        .docs-layout {
+            display: flex;
+            gap: var(--spacing-xxl);
+            margin-top: var(--spacing-xl);
+            margin-bottom: var(--spacing-section-lg);
+        }
+        .docs-sidebar {
+            width: 240px;
+            flex-shrink: 0;
+            border-right: 1px solid var(--colors-hairline-soft);
+            padding-right: var(--spacing-lg);
+        }
+        .docs-content {
+            flex: 1;
+            max-width: 800px;
+        }
+        .docs-nav-link {
+            display: block;
+            padding: var(--spacing-xs) 0;
+            color: var(--colors-slate);
+            font-size: 14px;
+        }
+        .docs-nav-link:hover, .docs-nav-link.active {
+            color: var(--colors-ink);
+            font-weight: 600;
+        }
+        .docs-section {
+            margin-bottom: var(--spacing-section);
+        }
+        .docs-section h2 {
+            margin-bottom: var(--spacing-md);
+        }
+        .docs-section p {
+            color: var(--colors-graphite);
+            margin-bottom: var(--spacing-md);
+        }
+        code {
+            font-family: monospace;
+            background-color: var(--colors-hairline);
+            padding: 2px 4px;
+            border-radius: var(--rounded-xs);
+            font-size: 14px;
+            color: var(--colors-ink);
+        }
+        pre {
+            background-color: var(--colors-canvas-warm);
+            padding: var(--spacing-md);
+            border-radius: var(--rounded-md);
+            overflow-x: auto;
+            border: 1px solid var(--colors-hairline-soft);
+        }
+        pre code {
+            background-color: transparent;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Navigation -->
+    <header class="nav-bar">
+        <a href="/" style="display: flex; align-items: center; gap: 8px;">
+            <img src="ll.svg" alt="ll logo" width="32" height="32">
+            <span class="heading-sm" style="letter-spacing: -0.5px;">leetlink</span>
+        </a>
+        <nav class="nav-links">
+            <a href="/" class="nav-link">Roadmap</a>
+            <a href="/docs.html" class="nav-link" style="color: var(--colors-ink);">Docs</a>
+        </nav>
+        <div style="display: flex; gap: var(--spacing-sm); align-items: center;">
+            <a href="/auth/google" class="button-primary">Sign in with Google</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="docs-layout">
+            <!-- Sidebar -->
+            <aside class="docs-sidebar">
+                <div style="position: sticky; top: var(--spacing-xl);">
+                    <p class="eyebrow" style="margin-bottom: var(--spacing-sm); color: var(--colors-stone);">Getting Started</p>
+                    <a href="#introduction" class="docs-nav-link active">Introduction</a>
+                    <a href="#how-to-use" class="docs-nav-link">How to Use</a>
+                    
+                    <p class="eyebrow" style="margin-top: var(--spacing-lg); margin-bottom: var(--spacing-sm); color: var(--colors-stone);">Features</p>
+                    <a href="#roadmaps" class="docs-nav-link">Curated Roadmaps</a>
+                    <a href="#progress" class="docs-nav-link">Progress Tracking</a>
+                    <a href="#resources" class="docs-nav-link">Video Resources</a>
+                </div>
+            </aside>
+
+            <!-- Content -->
+            <div class="docs-content">
+                <div style="margin-bottom: var(--spacing-section);">
+                    <h1 class="display">Documentation</h1>
+                    <p class="subtitle" style="color: var(--colors-slate); margin-top: var(--spacing-sm);">Everything you need to know about using LeetLink to prepare for coding interviews.</p>
+                </div>
+
+                <div id="introduction" class="docs-section">
+                    <h2 class="heading-md">Introduction</h2>
+                    <p class="body-text">LeetLink is an opinionated, minimalist roadmap platform designed to help software engineers master data structures and algorithms without the noise. We prioritize high-signal problem lists curated by difficulty, topic, and company.</p>
+                </div>
+
+                <div id="how-to-use" class="docs-section">
+                    <h2 class="heading-md">How to Use</h2>
+                    <p class="body-text">You don't need an account to start. Browse the roadmap on the homepage, select a track (like <strong>Beginner Patterns</strong> or <strong>By Company</strong>), and start solving.</p>
+                    <p class="body-text">Your progress is automatically saved to your browser's local storage. If you want to sync your progress across devices, simply click <strong>Sign in with Google</strong> in the top right corner.</p>
+                </div>
+
+                <div id="roadmaps" class="docs-section">
+                    <h2 class="heading-md">Curated Roadmaps</h2>
+                    <p class="body-text">We've broken down hundreds of problems into focused lists:</p>
+                    <ul style="list-style: disc; margin-left: var(--spacing-xl); color: var(--colors-graphite);" class="body-text">
+                        <li style="margin-bottom: var(--spacing-xs);"><strong>Beginner Patterns:</strong> Core fundamentals like Two Pointers and Sliding Window.</li>
+                        <li style="margin-bottom: var(--spacing-xs);"><strong>Advanced Algorithms:</strong> Graphs, Dynamic Programming, and Tries.</li>
+                        <li style="margin-bottom: var(--spacing-xs);"><strong>By Company:</strong> Targeted lists for Meta, Google, Amazon, and others.</li>
+                    </ul>
+                </div>
+                
+                <div id="progress" class="docs-section">
+                    <h2 class="heading-md">Progress Tracking</h2>
+                    <p class="body-text">Click the circular toggle next to any problem to mark it as complete. The progress counter at the top of the roadmap will update automatically.</p>
+                    <p class="body-text">If logged in, your data is securely stored in our backend, making sure you never lose track of your interview prep journey.</p>
+                </div>
+
+                <div id="resources" class="docs-section">
+                    <h2 class="heading-md">Video Resources</h2>
+                    <p class="body-text">We believe the best way to learn is by watching experts break down the solution. That's why every problem in our database comes with a hand-picked YouTube tutorial link from top educators.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <img src="ll.svg" alt="ll logo" width="24" height="24" style="filter: invert(1);">
+                <span class="heading-sm" style="letter-spacing: -0.5px;">leetlink</span>
+            </div>
+            <span class="meta" style="color: var(--colors-stone);">&copy; 2026 LeetLink.</span>
+        </div>
+    </footer>
+</body>
+</html>

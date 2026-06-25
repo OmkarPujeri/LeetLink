@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeetLink | Developer Roadmap</title>
+    <link rel="icon" type="image/svg+xml" href="ll.svg">
+
+    <!-- Inter Font (Substitute for abcNormal) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Runwai Design System -->
+    <link rel="stylesheet" href="css/runwai.css">
+</head>
+<body>
+    <!-- Top Navigation -->
+    <header class="nav-bar">
+        <a href="/" style="display: flex; align-items: center; gap: 8px;">
+            <img src="ll.svg" alt="ll logo" width="32" height="32">
+            <span class="heading-sm" style="letter-spacing: -0.5px;">leetlink</span>
+        </a>
+        <nav class="nav-links">
+            <a href="/" class="nav-link">Roadmap</a>
+            <a href="/docs.html" class="nav-link">Docs</a>
+        </nav>
+        <div style="display: flex; gap: var(--spacing-sm); align-items: center;">
+            <span id="userGreeting" class="meta" style="display:none;"></span>
+            <a href="/auth/google" class="button-primary" id="loginBtn">Sign in with Google</a>
+            <button class="button-ghost" id="logoutBtn" style="display:none;" onclick="window.location.href='/auth/logout'">Log out</button>
+        </div>
+    </header>
+
+    <!-- Main Content / Roadmap Grid -->
+    <main class="container" style="padding-top: var(--spacing-section);">
+        <div style="margin-bottom: var(--spacing-section);">
+            <h1 class="display">Master data structures and algorithms.</h1>
+            <p class="subtitle" style="color: var(--colors-slate); margin-top: var(--spacing-sm);">An inspired roadmap of coding patterns, curated by company and topic.</p>
+        </div>
+
+        <!-- Roadmap Controls -->
+        <div class="roadmap-tabs" id="roadmapTabs">
+            <div class="roadmap-tab active" data-tab="beginner">Beginner Patterns</div>
+            <div class="roadmap-tab" data-tab="advanced">Advanced Algorithms</div>
+            <div class="roadmap-tab" data-tab="company">By Company</div>
+            <div class="roadmap-tab" data-tab="topic">By Topic</div>
+        </div>
+
+        <div style="margin-bottom: var(--spacing-xl);">
+            <div class="meta" style="color: var(--colors-graphite);" id="progressText">Progress: 0/0 completed</div>
+        </div>
+
+        <!-- Roadmap Items -->
+        <div class="roadmap-list" id="roadmapContainer">
+            <!-- Items will be injected via JS -->
+            <div class="body-text" style="color: var(--colors-slate);">Loading roadmap...</div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container" style="display: flex; flex-direction: column; gap: var(--spacing-section);">
+            <div style="display: flex; gap: var(--spacing-xxl); flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 200px;">
+                    <p class="micro-caps footer-eyebrow">Resources</p>
+                    <a href="/docs.html" class="footer-link">Documentation</a>
+                    <a href="#" class="footer-link">Algorithms List</a>
+                </div>
+                <div style="flex: 1; min-width: 200px;">
+                    <p class="micro-caps footer-eyebrow">Company</p>
+                    <a href="#" class="footer-link">About</a>
+                    <a href="#" class="footer-link">Privacy Policy</a>
+                </div>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: var(--spacing-lg);">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <img src="ll.svg" alt="ll logo" width="24" height="24" style="filter: invert(1);">
+                    <span class="heading-sm" style="letter-spacing: -0.5px;">leetlink</span>
+                </div>
+                <span class="meta" style="color: var(--colors-stone);">&copy; 2026 LeetLink. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="roadmap.js"></script>
+</body>
+</html>
